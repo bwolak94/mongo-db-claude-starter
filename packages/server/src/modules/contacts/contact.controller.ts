@@ -37,7 +37,7 @@ export class ContactController {
 
   show = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const contact = await this.contactService.findById(req.params.id);
+      const contact = await this.contactService.findById(req.params.id as string);
       const response: ApiResponse<IContact> = {
         success: true,
         data: contact,
@@ -64,7 +64,7 @@ export class ContactController {
 
   update = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const contact = await this.contactService.update(req.params.id, req.body);
+      const contact = await this.contactService.update(req.params.id as string, req.body);
       const response: ApiResponse<IContact> = {
         success: true,
         data: contact,
@@ -78,7 +78,7 @@ export class ContactController {
 
   destroy = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      await this.contactService.delete(req.params.id);
+      await this.contactService.delete(req.params.id as string);
       const response: ApiResponse<null> = {
         success: true,
         data: null,

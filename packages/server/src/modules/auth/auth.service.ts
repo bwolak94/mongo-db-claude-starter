@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
+import jwt, { type SignOptions } from 'jsonwebtoken';
 import { AuthLogin, AuthRegister } from '@ai-crm/shared';
 import { UserModel } from './user.model';
 import { AppError } from '../../shared/errors/AppError';
@@ -47,8 +47,7 @@ export class AuthService {
   }
 
   private generateToken(userId: string, email: string): string {
-    return jwt.sign({ userId, email }, env.JWT_SECRET, {
-      expiresIn: env.JWT_EXPIRES_IN,
-    });
+    const options: SignOptions = { expiresIn: env.JWT_EXPIRES_IN as SignOptions['expiresIn'] };
+    return jwt.sign({ userId, email }, env.JWT_SECRET, options);
   }
 }

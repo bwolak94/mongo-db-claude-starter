@@ -20,7 +20,7 @@ export const authenticate: RequestHandler = (req, _res, next) => {
 
   try {
     const payload = jwt.verify(token, env.JWT_SECRET) as JwtPayload;
-    req.user = payload;
+    (req as any).user = payload;
     next();
   } catch {
     next(new AppError('Invalid or expired token', 401));

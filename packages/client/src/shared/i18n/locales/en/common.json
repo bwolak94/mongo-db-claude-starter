@@ -19,7 +19,12 @@
   "auth": {
     "login": "Sign in",
     "logout": "Sign out",
+    "register": "Sign up",
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "name": "Name",
+    "namePlaceholder": "John Doe",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
   }
 }

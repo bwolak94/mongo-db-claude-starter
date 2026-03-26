@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom';
 import { AppLayout } from '@/shared/components/layout/AppLayout';
 import { LoginPage } from '@/features/auth/pages/LoginPage';
+import { RegisterPage } from '@/features/auth/pages/RegisterPage';
 import { ContactsPage } from '@/features/contacts/pages/ContactsPage';
 import { ContactDetailPage } from '@/features/contacts/pages/ContactDetailPage';
 
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
   {
     path: '/login',
     element: <LoginPage />,
+  },
+  {
+    path: '/register',
+    element: <RegisterPage />,
   },
   {
     element: <ProtectedRoute />,
