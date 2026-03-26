@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "contacts": "Contacts",
+    "dashboard": "Dashboard",
+    "settings": "Settings"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create"
+  },
+  "status": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "empty": "No items found"
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "email": "Email",
+    "password": "Password"
+  }
+}
